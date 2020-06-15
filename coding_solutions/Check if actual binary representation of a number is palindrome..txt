@@ -1,0 +1,21 @@
+Problem Statement:
+Check if actual binary representation of a number is palindrome.
+def reverseBits(n):
+rev=0
+ while(n>0):
+rev=rev<<1
+if (n & 1==1):
+rev=rev^1
+n=n>>1
+return rev
+def isPalindrome(n):
+rev=reverseBits(n)
+return (n==rev)
+n=9
+if (isPalindrome(n)):
+print(“Yes”)
+else:
+print(“No”)
+
+OUTPUT:
+Yes
